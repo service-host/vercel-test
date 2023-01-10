@@ -1,6 +1,6 @@
 # Test Forms Actions with SvelteKit & Vercel
 
-https://vercel-test-kkv5884.vercel.app/
+https://vercel-test-sh.vercel.app/
 
 ## Creating a project
 
