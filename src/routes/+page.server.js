@@ -34,6 +34,7 @@ export const actions = {
 			}
 		})
 			.then((res) => {
+				console.log(res);
 				if (!res.ok) {
 					throw new Error('An error occurred, please try again!');
 				}
