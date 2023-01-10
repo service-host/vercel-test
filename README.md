@@ -1,6 +1,7 @@
 # Test Forms Actions with SvelteKit & Vercel
 
-https://vercel-test-sh.vercel.app/
+* https://vercel-test-sh.vercel.app/
+* https://netlify-test-sh.netlify.app/
 
 ## Creating a project
 
