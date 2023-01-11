@@ -29,7 +29,8 @@ export const actions = {
 			method: 'POST',
 			body: body,
 			headers: {
-				'Content-type': 'application/json; charset=UTF-8'
+				'Content-type': 'application/json; charset=UTF-8',
+				'x-hasura-admin-secret': env.HASURA_ADMIN_SECRET
 			}
 		})
 			.then((res) => {
