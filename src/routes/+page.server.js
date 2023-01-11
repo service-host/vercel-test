@@ -7,9 +7,23 @@ export const actions = {
 		const formData = await request.formData();
 
 		const name = formData.get('name');
+		const email = formData.get('email');
+		const mobile = formData.get('mobile');
+		const organisation = formData.get('organisation');
+		const messageText = formData.get('messageText');
 
-		const bodyJson = '{ "name": "' + name + '"}';
-		const body = bodyJson;
+		const body =
+			'{ "name": "' +
+			name +
+			'", "email": "' +
+			email +
+			'", "mobile": "' +
+			mobile +
+			'", "organisation": "' +
+			organisation +
+			'", "project_description": "' +
+			messageText +
+			'"}';
 
 		fetch(env.HASURA_PROJECT_ENDPOINT, {
 			method: 'POST',
@@ -20,7 +34,6 @@ export const actions = {
 			}
 		})
 			.then((res) => {
-				console.log(res);
 				if (!res.ok) {
 					throw new Error('An error occurred, please try again!');
 				}
@@ -30,6 +43,17 @@ export const actions = {
 				console.log(err);
 			});
 
-		throw redirect(303, '/thanks');
+		if (name.length < 2) {
+			return fail(400, {
+				error: true,
+				message: 'Please enter your full name. First name and surname are required.',
+				name,
+				email,
+				organisation,
+				messageText
+			});
+		}
+
+		throw redirect(303, '/');
 	}
 };
