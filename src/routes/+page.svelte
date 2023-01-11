@@ -7,7 +7,6 @@
 </script>
 
 <form
-	data-netlify="true"
 	method="POST"
 	action="?/create"
 	use:enhance={({ form }) => {
