@@ -8,8 +8,8 @@ export const actions = {
 
 		const name = formData.get('name');
 
-		const bodyJson = '{ "name": ' + name + '}';
-		const body = JSON.stringify(bodyJson);
+		const bodyJson = '{ "name": "' + name + '"}';
+		const body = bodyJson;
 
 		fetch(env.HASURA_PROJECT_ENDPOINT, {
 			method: 'POST',
