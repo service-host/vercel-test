@@ -1,0 +1,25 @@
+mutation AddLeads(
+  $budget: Int
+  $category: String
+  $content: String
+  $country: String
+  $skills: String
+  $title: String
+  $url: String
+  $status: String = "lead"
+) {
+  insert_project_leads_one(
+    object: {
+      title: $title
+      content: $content
+      budget: $budget
+      category: $category
+      country: $country
+      url: $url
+      status: $status
+      skills: $skills
+    }
+  ) {
+    id
+  }
+}

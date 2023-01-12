@@ -1,8 +1,6 @@
-# Test Forms Actions with SvelteKit & Vercel
+# create-svelte
 
-* https://vercel-test-sh.vercel.app/
-* https://netlify-test-sh.netlify.app/
-* Test webhook: https://webhook.site/#!/0327ed0d-10b9-4dcc-bc75-dc4d605f89a2/b520bb83-33ea-43d4-8218-72530ed9a659/1
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
 ## Creating a project
 
